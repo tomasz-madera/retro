@@ -29,6 +29,7 @@ pnpm-debug.log*
 Thumbs.db
 
 # IDE (project-local only; .cursor/ is committed)
+.cursor/sessions/
 .idea/
 *.swp
 *.swo

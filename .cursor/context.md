@@ -165,11 +165,9 @@ Prod deploy: SSH `ssh -p 3141 wskz0020@it.edunetwork.pl`, user `it`, PM2 via `ec
 
 ## Testing Strategy
 
-```bash
-/tdd                    # Unit + integration tests for new features
-/e2e                    # Playwright tests for auth flow, board CRUD, DnD
-/test-coverage          # Verify coverage targets
-```
+- Unit + integration: skill `tdd-workflow`, Vitest
+- E2E: skill `e2e-testing`, agent `e2e-runner` — auth flow, board CRUD, DnD
+- Target: 80%+ coverage on critical paths
 
 ### Critical E2E Flows
 
@@ -179,24 +177,20 @@ Prod deploy: SSH `ssh -p 3141 wskz0020@it.edunetwork.pl`, user `it`, PM2 via `ec
 4. Close retro → appears in history
 5. Admin: user list, role change
 
-## ECC Workflow
+## Agent Workflow
 
 ```bash
-# Planning a feature
-/ecc:plan "Add drag-and-drop board reordering with dnd-kit"
+# Planning a feature — use Cursor agent with context.md + relevant skills
+# Developing with TDD — skill: tdd-workflow
+# Before committing — agents: code-reviewer, security-reviewer
+# Before release — agent: e2e-runner
+```
 
-# Developing with TDD
-/tdd
+Hook tuning (optional):
 
-# Before committing
-/code-review
-/security-scan
-
-# PM2 prod management
-/pm2
-
-# Before release
-/e2e
+```bash
+export ECC_HOOK_PROFILE=standard
+export ECC_SESSION_START_MAX_CHARS=6000
 ```
 
 ## Git Workflow
