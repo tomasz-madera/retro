@@ -1,14 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import { addCard } from "@/actions/board";
+import type { ActionResult } from "@/lib/types";
 
 type AddCardFormProps = {
   columnId: number;
   disabled?: boolean;
+  onAddCard: (
+    columnId: number,
+    content: string,
+  ) => Promise<ActionResult<unknown>>;
 };
 
-export function AddCardForm({ columnId, disabled }: AddCardFormProps) {
+export function AddCardForm({ columnId, disabled, onAddCard }: AddCardFormProps) {
   const [content, setContent] = useState("");
   const [error, setError] = useState("");
   const [pending, setPending] = useState(false);
@@ -20,11 +24,7 @@ export function AddCardForm({ columnId, disabled }: AddCardFormProps) {
     setPending(true);
     setError("");
 
-    const formData = new FormData();
-    formData.set("columnId", String(columnId));
-    formData.set("content", content.trim());
-
-    const result = await addCard(formData);
+    const result = await onAddCard(columnId, content.trim());
 
     if (result.success) {
       setContent("");

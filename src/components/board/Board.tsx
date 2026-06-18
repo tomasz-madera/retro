@@ -11,7 +11,7 @@ import {
   type DragEndEvent,
   type DragStartEvent,
 } from "@dnd-kit/core";
-import { moveCard } from "@/actions/board";
+import { moveCard, addCard } from "@/actions/board";
 import { Column } from "./Column";
 import { Card } from "./Card";
 
@@ -62,6 +62,30 @@ export function Board({ columns, initialCards, disabled }: BoardProps) {
     if (type === "card") {
       setActiveCardId(id);
     }
+  }
+
+  async function handleAddCard(columnId: number, content: string) {
+    const formData = new FormData();
+    formData.set("columnId", String(columnId));
+    formData.set("content", content);
+
+    const result = await addCard(formData);
+
+    if (result.success) {
+      setCards((current) => [
+        ...current,
+        {
+          id: result.data.id,
+          columnId: result.data.columnId,
+          content: result.data.content,
+          position: result.data.position,
+          authorEmail: result.data.authorEmail,
+          createdAt: new Date(result.data.createdAt),
+        },
+      ]);
+    }
+
+    return result;
   }
 
   async function handleDragEnd(event: DragEndEvent) {
@@ -147,6 +171,7 @@ export function Board({ columns, initialCards, disabled }: BoardProps) {
             name={column.name}
             cards={getCardsForColumn(column.id)}
             disabled={disabled}
+            onAddCard={handleAddCard}
           />
         ))}
       </div>

@@ -112,7 +112,16 @@ export async function closeBoard(
 
 export async function addCard(
   formData: FormData,
-): Promise<ActionResult<{ id: number }>> {
+): Promise<
+  ActionResult<{
+    id: number;
+    columnId: number;
+    content: string;
+    position: number;
+    authorEmail: string;
+    createdAt: string;
+  }>
+> {
   const session = await auth();
   if (!session?.user) {
     return { success: false, error: "Unauthorized" };
@@ -172,7 +181,17 @@ export async function addCard(
     })
     .$returningId();
 
-  return { success: true, data: { id: cardResult.id } };
+  return {
+    success: true,
+    data: {
+      id: cardResult.id,
+      columnId: parsed.data.columnId,
+      content: parsed.data.content,
+      position: newPosition,
+      authorEmail: session.user.email,
+      createdAt: new Date().toISOString(),
+    },
+  };
 }
 
 export async function moveCard(

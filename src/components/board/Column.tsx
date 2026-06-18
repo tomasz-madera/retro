@@ -5,6 +5,7 @@ import {
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
 import { useDroppable } from "@dnd-kit/core";
+import type { ActionResult } from "@/lib/types";
 import { AddCardForm } from "./AddCardForm";
 import { Card } from "./Card";
 
@@ -20,9 +21,13 @@ type ColumnProps = {
   name: string;
   cards: CardData[];
   disabled?: boolean;
+  onAddCard: (
+    columnId: number,
+    content: string,
+  ) => Promise<ActionResult<unknown>>;
 };
 
-export function Column({ id, name, cards, disabled }: ColumnProps) {
+export function Column({ id, name, cards, disabled, onAddCard }: ColumnProps) {
   const { setNodeRef, isOver } = useDroppable({
     id: `column-${id}`,
     disabled,
@@ -43,7 +48,7 @@ export function Column({ id, name, cards, disabled }: ColumnProps) {
           ))}
         </div>
       </SortableContext>
-      {!disabled && <AddCardForm columnId={id} />}
+      {!disabled && <AddCardForm columnId={id} onAddCard={onAddCard} />}
     </div>
   );
 }
