@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Database backups (prod dumps — never commit)
+backups/*.sql
+backups/.my.cnf
+
+# Next.js
+.next/
+out/
+
+# Build / tooling
+dist/
+*.tsbuildinfo
+.turbo/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE (project-local only; .cursor/ is committed)
+.idea/
+*.swp
+*.swo
+
+# Drizzle
+drizzle/meta/
+
+# Test / coverage
+coverage/

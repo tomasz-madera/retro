@@ -1,0 +1,1296 @@
+{
+  "schemaVersion": "ecc.install.v1",
+  "installedAt": "2026-06-18T13:00:50.754Z",
+  "target": {
+    "id": "cursor-project",
+    "target": "cursor",
+    "kind": "project",
+    "root": "/home/tomek/Projects/retro/.cursor",
+    "installStatePath": "/home/tomek/Projects/retro/.cursor/ecc-install-state.json"
+  },
+  "request": {
+    "profile": null,
+    "modules": [],
+    "includeComponents": [
+      "skill:security-review"
+    ],
+    "excludeComponents": [],
+    "legacyLanguages": [],
+    "legacyMode": false
+  },
+  "resolution": {
+    "selectedModules": [
+      "platform-configs",
+      "workflow-quality",
+      "security"
+    ],
+    "skippedModules": []
+  },
+  "source": {
+    "repoVersion": "2.0.0",
+    "repoCommit": "ceca28852e5b31edbbf66ebccc8fd163dd14208e",
+    "manifestVersion": 1
+  },
+  "operations": [
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/hooks/adapter.js",
+      "sourceRelativePath": ".cursor/hooks/adapter.js",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/hooks/adapter.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/hooks/after-file-edit.js",
+      "sourceRelativePath": ".cursor/hooks/after-file-edit.js",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/hooks/after-file-edit.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/hooks/after-mcp-execution.js",
+      "sourceRelativePath": ".cursor/hooks/after-mcp-execution.js",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/hooks/after-mcp-execution.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/hooks/after-shell-execution.js",
+      "sourceRelativePath": ".cursor/hooks/after-shell-execution.js",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/hooks/after-shell-execution.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/hooks/after-tab-file-edit.js",
+      "sourceRelativePath": ".cursor/hooks/after-tab-file-edit.js",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/hooks/after-tab-file-edit.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/hooks/before-mcp-execution.js",
+      "sourceRelativePath": ".cursor/hooks/before-mcp-execution.js",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/hooks/before-mcp-execution.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/hooks/before-read-file.js",
+      "sourceRelativePath": ".cursor/hooks/before-read-file.js",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/hooks/before-read-file.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/hooks/before-shell-execution-block-no-verify.js",
+      "sourceRelativePath": ".cursor/hooks/before-shell-execution-block-no-verify.js",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/hooks/before-shell-execution-block-no-verify.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/hooks/before-shell-execution.js",
+      "sourceRelativePath": ".cursor/hooks/before-shell-execution.js",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/hooks/before-shell-execution.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/hooks/before-submit-prompt.js",
+      "sourceRelativePath": ".cursor/hooks/before-submit-prompt.js",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/hooks/before-submit-prompt.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/hooks/before-tab-file-read.js",
+      "sourceRelativePath": ".cursor/hooks/before-tab-file-read.js",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/hooks/before-tab-file-read.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/hooks/pre-compact.js",
+      "sourceRelativePath": ".cursor/hooks/pre-compact.js",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/hooks/pre-compact.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/hooks/session-end.js",
+      "sourceRelativePath": ".cursor/hooks/session-end.js",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/hooks/session-end.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/hooks/session-start.js",
+      "sourceRelativePath": ".cursor/hooks/session-start.js",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/hooks/session-start.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/hooks/stop.js",
+      "sourceRelativePath": ".cursor/hooks/stop.js",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/hooks/stop.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/hooks/subagent-start.js",
+      "sourceRelativePath": ".cursor/hooks/subagent-start.js",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/hooks/subagent-start.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/hooks/subagent-stop.js",
+      "sourceRelativePath": ".cursor/hooks/subagent-stop.js",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/hooks/subagent-stop.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/hooks.json",
+      "sourceRelativePath": ".cursor/hooks.json",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/hooks.json",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/skills/article-writing/SKILL.md",
+      "sourceRelativePath": ".cursor/skills/article-writing/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/article-writing/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/skills/bun-runtime/SKILL.md",
+      "sourceRelativePath": ".cursor/skills/bun-runtime/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/bun-runtime/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/skills/content-engine/SKILL.md",
+      "sourceRelativePath": ".cursor/skills/content-engine/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/content-engine/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/skills/documentation-lookup/SKILL.md",
+      "sourceRelativePath": ".cursor/skills/documentation-lookup/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/documentation-lookup/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/skills/frontend-slides/SKILL.md",
+      "sourceRelativePath": ".cursor/skills/frontend-slides/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/frontend-slides/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/skills/frontend-slides/STYLE_PRESETS.md",
+      "sourceRelativePath": ".cursor/skills/frontend-slides/STYLE_PRESETS.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/frontend-slides/STYLE_PRESETS.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/skills/investor-materials/SKILL.md",
+      "sourceRelativePath": ".cursor/skills/investor-materials/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/investor-materials/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/skills/investor-outreach/SKILL.md",
+      "sourceRelativePath": ".cursor/skills/investor-outreach/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/investor-outreach/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/skills/market-research/SKILL.md",
+      "sourceRelativePath": ".cursor/skills/market-research/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/market-research/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/skills/mcp-server-patterns/SKILL.md",
+      "sourceRelativePath": ".cursor/skills/mcp-server-patterns/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/mcp-server-patterns/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/skills/nextjs-turbopack/SKILL.md",
+      "sourceRelativePath": ".cursor/skills/nextjs-turbopack/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/nextjs-turbopack/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "merge-json",
+      "moduleId": "platform-configs",
+      "sourceRelativePath": ".mcp.json",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/mcp.json",
+      "strategy": "merge-json",
+      "ownership": "managed",
+      "scaffoldOnly": false,
+      "mergePayload": {
+        "mcpServers": {
+          "chrome-devtools": {
+            "command": "npx",
+            "args": [
+              "-y",
+              "chrome-devtools-mcp@latest"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/common-agents.md",
+      "sourceRelativePath": ".cursor/rules/common-agents.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/common-agents.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/common-coding-style.md",
+      "sourceRelativePath": ".cursor/rules/common-coding-style.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/common-coding-style.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/common-development-workflow.md",
+      "sourceRelativePath": ".cursor/rules/common-development-workflow.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/common-development-workflow.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/common-git-workflow.md",
+      "sourceRelativePath": ".cursor/rules/common-git-workflow.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/common-git-workflow.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/common-hooks.md",
+      "sourceRelativePath": ".cursor/rules/common-hooks.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/common-hooks.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/common-patterns.md",
+      "sourceRelativePath": ".cursor/rules/common-patterns.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/common-patterns.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/common-performance.md",
+      "sourceRelativePath": ".cursor/rules/common-performance.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/common-performance.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/common-security.md",
+      "sourceRelativePath": ".cursor/rules/common-security.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/common-security.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/common-testing.md",
+      "sourceRelativePath": ".cursor/rules/common-testing.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/common-testing.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/golang-coding-style.md",
+      "sourceRelativePath": ".cursor/rules/golang-coding-style.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/golang-coding-style.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/golang-hooks.md",
+      "sourceRelativePath": ".cursor/rules/golang-hooks.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/golang-hooks.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/golang-patterns.md",
+      "sourceRelativePath": ".cursor/rules/golang-patterns.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/golang-patterns.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/golang-security.md",
+      "sourceRelativePath": ".cursor/rules/golang-security.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/golang-security.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/golang-testing.md",
+      "sourceRelativePath": ".cursor/rules/golang-testing.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/golang-testing.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/kotlin-coding-style.md",
+      "sourceRelativePath": ".cursor/rules/kotlin-coding-style.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/kotlin-coding-style.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/kotlin-hooks.md",
+      "sourceRelativePath": ".cursor/rules/kotlin-hooks.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/kotlin-hooks.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/kotlin-patterns.md",
+      "sourceRelativePath": ".cursor/rules/kotlin-patterns.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/kotlin-patterns.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/kotlin-security.md",
+      "sourceRelativePath": ".cursor/rules/kotlin-security.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/kotlin-security.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/kotlin-testing.md",
+      "sourceRelativePath": ".cursor/rules/kotlin-testing.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/kotlin-testing.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/php-coding-style.md",
+      "sourceRelativePath": ".cursor/rules/php-coding-style.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/php-coding-style.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/php-hooks.md",
+      "sourceRelativePath": ".cursor/rules/php-hooks.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/php-hooks.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/php-patterns.md",
+      "sourceRelativePath": ".cursor/rules/php-patterns.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/php-patterns.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/php-security.md",
+      "sourceRelativePath": ".cursor/rules/php-security.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/php-security.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/php-testing.md",
+      "sourceRelativePath": ".cursor/rules/php-testing.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/php-testing.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/python-coding-style.md",
+      "sourceRelativePath": ".cursor/rules/python-coding-style.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/python-coding-style.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/python-hooks.md",
+      "sourceRelativePath": ".cursor/rules/python-hooks.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/python-hooks.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/python-patterns.md",
+      "sourceRelativePath": ".cursor/rules/python-patterns.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/python-patterns.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/python-security.md",
+      "sourceRelativePath": ".cursor/rules/python-security.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/python-security.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/python-testing.md",
+      "sourceRelativePath": ".cursor/rules/python-testing.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/python-testing.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/swift-coding-style.md",
+      "sourceRelativePath": ".cursor/rules/swift-coding-style.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/swift-coding-style.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/swift-hooks.md",
+      "sourceRelativePath": ".cursor/rules/swift-hooks.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/swift-hooks.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/swift-patterns.md",
+      "sourceRelativePath": ".cursor/rules/swift-patterns.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/swift-patterns.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/swift-security.md",
+      "sourceRelativePath": ".cursor/rules/swift-security.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/swift-security.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/swift-testing.md",
+      "sourceRelativePath": ".cursor/rules/swift-testing.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/swift-testing.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/typescript-coding-style.md",
+      "sourceRelativePath": ".cursor/rules/typescript-coding-style.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/typescript-coding-style.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/typescript-hooks.md",
+      "sourceRelativePath": ".cursor/rules/typescript-hooks.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/typescript-hooks.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/typescript-patterns.md",
+      "sourceRelativePath": ".cursor/rules/typescript-patterns.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/typescript-patterns.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/typescript-security.md",
+      "sourceRelativePath": ".cursor/rules/typescript-security.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/typescript-security.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/.cursor/rules/typescript-testing.md",
+      "sourceRelativePath": ".cursor/rules/typescript-testing.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/rules/typescript-testing.mdc",
+      "strategy": "flatten-copy",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/mcp-configs/mcp-servers.json",
+      "sourceRelativePath": "mcp-configs/mcp-servers.json",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/mcp-configs/mcp-servers.json",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/scripts/auto-update.js",
+      "sourceRelativePath": "scripts/auto-update.js",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/scripts/auto-update.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "/tmp/ECC/scripts/setup-package-manager.js",
+      "sourceRelativePath": "scripts/setup-package-manager.js",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/scripts/setup-package-manager.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/agent-sort/SKILL.md",
+      "sourceRelativePath": "skills/agent-sort/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/agent-sort/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/agent-introspection-debugging/SKILL.md",
+      "sourceRelativePath": "skills/agent-introspection-debugging/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/agent-introspection-debugging/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/ai-regression-testing/SKILL.md",
+      "sourceRelativePath": "skills/ai-regression-testing/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/ai-regression-testing/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/configure-ecc/SKILL.md",
+      "sourceRelativePath": "skills/configure-ecc/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/configure-ecc/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/code-tour/SKILL.md",
+      "sourceRelativePath": "skills/code-tour/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/code-tour/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/continuous-learning/SKILL.md",
+      "sourceRelativePath": "skills/continuous-learning/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/continuous-learning/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/continuous-learning/config.json",
+      "sourceRelativePath": "skills/continuous-learning/config.json",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/continuous-learning/config.json",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/continuous-learning/evaluate-session.sh",
+      "sourceRelativePath": "skills/continuous-learning/evaluate-session.sh",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/continuous-learning/evaluate-session.sh",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/continuous-learning-v2/SKILL.md",
+      "sourceRelativePath": "skills/continuous-learning-v2/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/continuous-learning-v2/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/continuous-learning-v2/agents/observer-loop.sh",
+      "sourceRelativePath": "skills/continuous-learning-v2/agents/observer-loop.sh",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/continuous-learning-v2/agents/observer-loop.sh",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/continuous-learning-v2/agents/observer.md",
+      "sourceRelativePath": "skills/continuous-learning-v2/agents/observer.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/continuous-learning-v2/agents/observer.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/continuous-learning-v2/agents/session-guardian.sh",
+      "sourceRelativePath": "skills/continuous-learning-v2/agents/session-guardian.sh",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/continuous-learning-v2/agents/session-guardian.sh",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/continuous-learning-v2/agents/start-observer.sh",
+      "sourceRelativePath": "skills/continuous-learning-v2/agents/start-observer.sh",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/continuous-learning-v2/agents/start-observer.sh",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/continuous-learning-v2/config.json",
+      "sourceRelativePath": "skills/continuous-learning-v2/config.json",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/continuous-learning-v2/config.json",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/continuous-learning-v2/hooks/observe.sh",
+      "sourceRelativePath": "skills/continuous-learning-v2/hooks/observe.sh",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/continuous-learning-v2/hooks/observe.sh",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/continuous-learning-v2/scripts/detect-project.sh",
+      "sourceRelativePath": "skills/continuous-learning-v2/scripts/detect-project.sh",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/continuous-learning-v2/scripts/detect-project.sh",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/continuous-learning-v2/scripts/instinct-cli.py",
+      "sourceRelativePath": "skills/continuous-learning-v2/scripts/instinct-cli.py",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/continuous-learning-v2/scripts/instinct-cli.py",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/continuous-learning-v2/scripts/lib/homunculus-dir.sh",
+      "sourceRelativePath": "skills/continuous-learning-v2/scripts/lib/homunculus-dir.sh",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/continuous-learning-v2/scripts/lib/homunculus-dir.sh",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/continuous-learning-v2/scripts/migrate-homunculus.sh",
+      "sourceRelativePath": "skills/continuous-learning-v2/scripts/migrate-homunculus.sh",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/continuous-learning-v2/scripts/migrate-homunculus.sh",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/continuous-learning-v2/scripts/test_parse_instinct.py",
+      "sourceRelativePath": "skills/continuous-learning-v2/scripts/test_parse_instinct.py",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/continuous-learning-v2/scripts/test_parse_instinct.py",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/council/SKILL.md",
+      "sourceRelativePath": "skills/council/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/council/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/e2e-testing/SKILL.md",
+      "sourceRelativePath": "skills/e2e-testing/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/e2e-testing/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/error-handling/SKILL.md",
+      "sourceRelativePath": "skills/error-handling/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/error-handling/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/eval-harness/SKILL.md",
+      "sourceRelativePath": "skills/eval-harness/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/eval-harness/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/hookify-rules/SKILL.md",
+      "sourceRelativePath": "skills/hookify-rules/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/hookify-rules/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/iterative-retrieval/SKILL.md",
+      "sourceRelativePath": "skills/iterative-retrieval/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/iterative-retrieval/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/plankton-code-quality/SKILL.md",
+      "sourceRelativePath": "skills/plankton-code-quality/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/plankton-code-quality/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/production-audit/SKILL.md",
+      "sourceRelativePath": "skills/production-audit/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/production-audit/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/skill-scout/SKILL.md",
+      "sourceRelativePath": "skills/skill-scout/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/skill-scout/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/skill-stocktake/SKILL.md",
+      "sourceRelativePath": "skills/skill-stocktake/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/skill-stocktake/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/skill-stocktake/scripts/quick-diff.sh",
+      "sourceRelativePath": "skills/skill-stocktake/scripts/quick-diff.sh",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/skill-stocktake/scripts/quick-diff.sh",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/skill-stocktake/scripts/save-results.sh",
+      "sourceRelativePath": "skills/skill-stocktake/scripts/save-results.sh",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/skill-stocktake/scripts/save-results.sh",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/skill-stocktake/scripts/scan.sh",
+      "sourceRelativePath": "skills/skill-stocktake/scripts/scan.sh",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/skill-stocktake/scripts/scan.sh",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/strategic-compact/SKILL.md",
+      "sourceRelativePath": "skills/strategic-compact/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/strategic-compact/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/tdd-workflow/SKILL.md",
+      "sourceRelativePath": "skills/tdd-workflow/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/tdd-workflow/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/verification-loop/SKILL.md",
+      "sourceRelativePath": "skills/verification-loop/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/verification-loop/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "/tmp/ECC/skills/windows-desktop-e2e/SKILL.md",
+      "sourceRelativePath": "skills/windows-desktop-e2e/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/windows-desktop-e2e/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "/tmp/ECC/skills/defi-amm-security/SKILL.md",
+      "sourceRelativePath": "skills/defi-amm-security/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/defi-amm-security/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "/tmp/ECC/skills/django-security/SKILL.md",
+      "sourceRelativePath": "skills/django-security/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/django-security/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "/tmp/ECC/skills/healthcare-phi-compliance/SKILL.md",
+      "sourceRelativePath": "skills/healthcare-phi-compliance/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/healthcare-phi-compliance/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "/tmp/ECC/skills/hipaa-compliance/SKILL.md",
+      "sourceRelativePath": "skills/hipaa-compliance/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/hipaa-compliance/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "/tmp/ECC/skills/laravel-security/SKILL.md",
+      "sourceRelativePath": "skills/laravel-security/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/laravel-security/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "/tmp/ECC/skills/llm-trading-agent-security/SKILL.md",
+      "sourceRelativePath": "skills/llm-trading-agent-security/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/llm-trading-agent-security/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "/tmp/ECC/skills/nodejs-keccak256/SKILL.md",
+      "sourceRelativePath": "skills/nodejs-keccak256/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/nodejs-keccak256/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "/tmp/ECC/skills/perl-security/SKILL.md",
+      "sourceRelativePath": "skills/perl-security/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/perl-security/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "/tmp/ECC/skills/quarkus-security/SKILL.md",
+      "sourceRelativePath": "skills/quarkus-security/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/quarkus-security/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "/tmp/ECC/skills/security-review/SKILL.md",
+      "sourceRelativePath": "skills/security-review/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/security-review/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "/tmp/ECC/skills/security-review/cloud-infrastructure-security.md",
+      "sourceRelativePath": "skills/security-review/cloud-infrastructure-security.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/security-review/cloud-infrastructure-security.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "/tmp/ECC/skills/security-scan/SKILL.md",
+      "sourceRelativePath": "skills/security-scan/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/security-scan/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "/tmp/ECC/skills/security-bounty-hunter/SKILL.md",
+      "sourceRelativePath": "skills/security-bounty-hunter/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/security-bounty-hunter/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "/tmp/ECC/skills/springboot-security/SKILL.md",
+      "sourceRelativePath": "skills/springboot-security/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/springboot-security/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "/tmp/ECC/skills/evm-token-decimals/SKILL.md",
+      "sourceRelativePath": "skills/evm-token-decimals/SKILL.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/skills/evm-token-decimals/SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "/tmp/ECC/the-security-guide.md",
+      "sourceRelativePath": "the-security-guide.md",
+      "destinationPath": "/home/tomek/Projects/retro/.cursor/the-security-guide.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    }
+  ]
+}
