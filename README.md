@@ -1,11 +1,11 @@
 # Scrum Retro App
 
-Scrum retrospective board with retro CRT aesthetic. Built with Next.js, Drizzle ORM, MySQL, and Auth.js.
+Scrum retrospective board. Built with Next.js, Drizzle ORM, MySQL, and Auth.js.
 
 ## Stack
 
 - **Framework:** Next.js 16 (App Router, Server Actions)
-- **Database:** MySQL (`planningpoker` DB, `retro_*` tables)
+- **Database:** MySQL (`planningpoker` DB, `retro_`* tables)
 - **Auth:** Auth.js v5 (credentials + JWT sessions)
 - **UI:** Tailwind CSS v4, retro CRT theme
 - **DnD:** @dnd-kit
@@ -19,48 +19,39 @@ Scrum retrospective board with retro CRT aesthetic. Built with Next.js, Drizzle 
 ## Local Development (Docker)
 
 1. Add to `/etc/hosts` if needed:
-
-   ```
+  ```
    127.0.0.1 retro.localhost
-   ```
-
+  ```
 2. Start services:
-
-   ```bash
+  ```bash
    docker compose up --build
-   ```
-
-3. Open http://retro.localhost:8080 (port 8080 — port 80 may be in use on host)
-
+  ```
+3. Open [http://retro.localhost:8080](http://retro.localhost:8080) (port 8080 — port 80 may be in use on host)
 4. Run migrations (first time, in another terminal):
-
-   ```bash
+  ```bash
    docker compose exec app pnpm db:migrate
    docker compose exec app pnpm db:seed
-   ```
+  ```
 
 Default dev admin (from docker-compose.yml):
-- Email: `tomasz.madera@wskz.pl`
-- Password: `dev-admin-password`
+
+- Email: ***
+- Password: ***
 
 ## Local Development (without Docker)
 
 1. Copy env file:
-
-   ```bash
+  ```bash
    cp .env.example .env.local
-   ```
-
+  ```
 2. Set `DATABASE_URL`, `AUTH_SECRET`, `SEED_ADMIN_PASSWORD` in `.env.local`
-
 3. Install and run:
-
-   ```bash
+  ```bash
    pnpm install
    pnpm db:migrate
    pnpm db:seed
    pnpm dev
-   ```
+  ```
 
 ## Database
 
@@ -87,17 +78,15 @@ pnpm db:migrate    # apply migrations
 pnpm db:seed       # seed admin user (idempotent)
 ```
 
-## Production (it.edunetwork.pl)
+## Production
 
 Server has no Docker. Deploy via PM2:
 
 ```bash
-ssh -p 3141 wskz0020@it.edunetwork.pl
-sudo su - it
 cd /path/to/retro
 pnpm install
 pnpm build
-pnpm db:migrate    # only after prod backup confirmed
+pnpm db:migrate
 pnpm db:seed
 pm2 start ecosystem.config.js
 pm2 save
@@ -106,23 +95,26 @@ pm2 save
 Reverse proxy (Apache/Nginx) forwards to port 3000.
 
 Set in `.env.local` on server:
-- `DATABASE_URL` pointing to `db10-lab.csk.lan`
+
+- `DATABASE_URL`
 - `AUTH_SECRET` (generate with `openssl rand -base64 32`)
-- `AUTH_URL=https://it.edunetwork.pl`
+- `AUTH_URL=<url>`
 - `SEED_ADMIN_EMAIL` / `SEED_ADMIN_PASSWORD`
 
 ## Scripts
 
-| Command | Description |
-|---------|-------------|
-| `pnpm dev` | Start dev server |
-| `pnpm build` | Production build |
-| `pnpm start` | Start production server |
-| `pnpm lint` | ESLint |
+
+| Command            | Description                |
+| ------------------ | -------------------------- |
+| `pnpm dev`         | Start dev server           |
+| `pnpm build`       | Production build           |
+| `pnpm start`       | Start production server    |
+| `pnpm lint`        | ESLint                     |
 | `pnpm db:generate` | Generate Drizzle migration |
-| `pnpm db:migrate` | Apply migrations |
-| `pnpm db:seed` | Seed admin user |
-| `pnpm test` | Run Vitest |
+| `pnpm db:migrate`  | Apply migrations           |
+| `pnpm db:seed`     | Seed admin user            |
+| `pnpm test`        | Run Vitest                 |
+
 
 ## Project Structure
 
