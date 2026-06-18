@@ -1,0 +1,50 @@
+services:
+  caddy:
+    image: caddy:2-alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./docker/Caddyfile:/etc/caddy/Caddyfile:ro
+    depends_on:
+      - app
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    expose:
+      - "3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      DATABASE_URL: mysql://retro:retro@mysql:3306/planningpoker
+      AUTH_SECRET: dev-secret-change-me
+      AUTH_URL: http://retro.localhost:8080
+      SEED_ADMIN_EMAIL: tomasz.madera@wskz.pl
+      SEED_ADMIN_PASSWORD: dev-admin-password
+    depends_on:
+      mysql:
+        condition: service_healthy
+    command: pnpm dev
+
+  mysql:
+    image: mysql:8.4
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: planningpoker
+      MYSQL_USER: retro
+      MYSQL_PASSWORD: retro
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  mysql_data:

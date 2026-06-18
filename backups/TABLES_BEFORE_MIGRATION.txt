@@ -1,0 +1,18 @@
+# Existing tables in planningpoker DB (before retro_* migrations)
+# Backup: planningpoker_2026-06-18_153157.sql
+# Date: 2026-06-18
+
+estimations
+estimations_to_users
+failed_jobs
+games
+migrations
+model_has_permissions
+model_has_roles
+password_resets
+permissions
+personal_access_tokens
+role_has_permissions
+roles
+users
+votes

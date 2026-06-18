@@ -1,0 +1,10 @@
+node_modules
+.next
+.git
+.cursor/sessions
+backups/*.sql
+backups/.my.cnf
+coverage
+*.log
+.env*
+!.env.example

@@ -1,0 +1,463 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap");
+@import "tailwindcss";
+
+:root {
+  --retro-bg: #0a0e0a;
+  --retro-bg-panel: #0d1a0d;
+  --retro-green: #33ff33;
+  --retro-green-dim: #1a8c1a;
+  --retro-green-glow: #00ff41;
+  --retro-amber: #ffb000;
+  --retro-red: #ff3333;
+  --retro-border: #1a5c1a;
+  --retro-text: #33ff33;
+  --retro-text-dim: #1a8c1a;
+}
+
+@theme inline {
+  --color-background: var(--retro-bg);
+  --color-foreground: var(--retro-text);
+  --font-sans: "VT323", monospace;
+  --font-display: "Press Start 2P", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--retro-bg);
+  color: var(--retro-text);
+  font-family: "VT323", monospace;
+  font-size: 20px;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--retro-green);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--retro-green-glow);
+  text-shadow: 0 0 8px var(--retro-green-glow);
+}
+
+/* CRT Screen */
+.crt-screen {
+  position: relative;
+  min-height: 100vh;
+  background: var(--retro-bg);
+}
+
+.crt-content {
+  position: relative;
+  z-index: 1;
+}
+
+.crt-scanlines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.15) 2px,
+    rgba(0, 0, 0, 0.15) 4px
+  );
+}
+
+/* Terminal */
+.terminal-window {
+  border: 2px solid var(--retro-border);
+  background: var(--retro-bg-panel);
+  box-shadow: 0 0 20px rgba(51, 255, 51, 0.1);
+}
+
+.terminal-titlebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: var(--retro-border);
+  border-bottom: 1px solid var(--retro-green-dim);
+}
+
+.terminal-title {
+  font-family: "Press Start 2P", monospace;
+  font-size: 10px;
+  color: var(--retro-green);
+}
+
+.terminal-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.terminal-controls span {
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--retro-green-dim);
+  display: block;
+}
+
+.terminal-body {
+  padding: 24px;
+}
+
+/* Header */
+.retro-header {
+  border-bottom: 2px solid var(--retro-border);
+  background: var(--retro-bg-panel);
+  padding: 12px 24px;
+}
+
+.retro-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.retro-logo {
+  font-family: "Press Start 2P", monospace;
+  font-size: 12px;
+  color: var(--retro-green-glow);
+  text-shadow: 0 0 10px var(--retro-green-glow);
+}
+
+.retro-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 18px;
+}
+
+.retro-user {
+  color: var(--retro-text-dim);
+}
+
+.retro-link-btn {
+  background: none;
+  border: none;
+  color: var(--retro-green);
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.retro-link-btn:hover {
+  color: var(--retro-green-glow);
+  text-shadow: 0 0 8px var(--retro-green-glow);
+}
+
+/* Buttons */
+.retro-btn {
+  font-family: "VT323", monospace;
+  font-size: 20px;
+  padding: 8px 20px;
+  border: 2px solid var(--retro-green);
+  background: transparent;
+  color: var(--retro-green);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.retro-btn:hover:not(:disabled) {
+  background: var(--retro-green);
+  color: var(--retro-bg);
+  box-shadow: 0 0 15px var(--retro-green-glow);
+}
+
+.retro-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.retro-btn-primary {
+  border-color: var(--retro-green);
+  color: var(--retro-green);
+}
+
+.retro-btn-secondary {
+  border-color: var(--retro-green-dim);
+  color: var(--retro-green-dim);
+}
+
+.retro-btn-danger {
+  border-color: var(--retro-red);
+  color: var(--retro-red);
+}
+
+.retro-btn-danger:hover:not(:disabled) {
+  background: var(--retro-red);
+  color: var(--retro-bg);
+  box-shadow: 0 0 15px var(--retro-red);
+}
+
+.retro-btn-sm {
+  font-size: 16px;
+  padding: 4px 12px;
+}
+
+/* Forms */
+.retro-input,
+.retro-select {
+  width: 100%;
+  padding: 8px 12px;
+  background: var(--retro-bg);
+  border: 1px solid var(--retro-border);
+  color: var(--retro-green);
+  font-family: "VT323", monospace;
+  font-size: 20px;
+  resize: vertical;
+}
+
+.retro-input:focus,
+.retro-select:focus {
+  outline: none;
+  border-color: var(--retro-green);
+  box-shadow: 0 0 8px rgba(51, 255, 51, 0.3);
+}
+
+.retro-label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--retro-text-dim);
+  font-size: 18px;
+}
+
+.retro-error {
+  color: var(--retro-red);
+  font-size: 16px;
+  margin: 4px 0;
+}
+
+/* Dashboard */
+.retro-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.retro-section {
+  margin-bottom: 40px;
+}
+
+.retro-section-title {
+  font-family: "Press Start 2P", monospace;
+  font-size: 12px;
+  color: var(--retro-amber);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.retro-board-list {
+  display: grid;
+  gap: 12px;
+}
+
+.retro-board-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid var(--retro-border);
+  background: var(--retro-bg-panel);
+  transition: border-color 0.15s;
+}
+
+.retro-board-item:hover {
+  border-color: var(--retro-green);
+}
+
+.retro-board-item-title {
+  font-size: 22px;
+  color: var(--retro-green);
+}
+
+.retro-board-item-meta {
+  font-size: 16px;
+  color: var(--retro-text-dim);
+}
+
+.retro-empty {
+  color: var(--retro-text-dim);
+  font-style: italic;
+}
+
+/* Kanban Board */
+.retro-board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.retro-board-title {
+  font-family: "Press Start 2P", monospace;
+  font-size: 14px;
+  color: var(--retro-green-glow);
+}
+
+.retro-board {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  min-height: 400px;
+}
+
+.retro-column {
+  flex: 0 0 280px;
+  background: var(--retro-bg-panel);
+  border: 1px solid var(--retro-border);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 300px;
+}
+
+.retro-column-over {
+  border-color: var(--retro-green);
+  box-shadow: 0 0 10px rgba(51, 255, 51, 0.2);
+}
+
+.retro-column-title {
+  font-family: "Press Start 2P", monospace;
+  font-size: 10px;
+  color: var(--retro-amber);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--retro-border);
+  text-transform: uppercase;
+}
+
+.retro-column-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-height: 60px;
+}
+
+.retro-card {
+  background: var(--retro-bg);
+  border: 1px solid var(--retro-green-dim);
+  padding: 10px;
+  cursor: grab;
+  touch-action: none;
+}
+
+.retro-card:active {
+  cursor: grabbing;
+}
+
+.retro-card-content {
+  margin-bottom: 8px;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.retro-card-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--retro-text-dim);
+}
+
+.add-card-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: auto;
+}
+
+/* Auth pages */
+.auth-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-title {
+  font-family: "Press Start 2P", monospace;
+  font-size: 14px;
+  text-align: center;
+  color: var(--retro-green-glow);
+  margin-bottom: 8px;
+}
+
+.auth-link {
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Admin */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 10px 16px;
+  border: 1px solid var(--retro-border);
+  text-align: left;
+}
+
+.admin-table th {
+  font-family: "Press Start 2P", monospace;
+  font-size: 10px;
+  color: var(--retro-amber);
+  background: var(--retro-bg-panel);
+}
+
+/* Column builder */
+.column-builder {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.column-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.column-row .retro-input {
+  flex: 1;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 14px;
+  border: 1px solid;
+}
+
+.status-active {
+  border-color: var(--retro-green);
+  color: var(--retro-green);
+}
+
+.status-closed {
+  border-color: var(--retro-text-dim);
+  color: var(--retro-text-dim);
+}
