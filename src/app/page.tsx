@@ -2,42 +2,41 @@ import Link from "next/link";
 import { auth } from "@/lib/auth";
 import { getBoards } from "@/actions/board";
 import { Header } from "@/components/layout/Header";
-import { CRTScreen } from "@/components/retro/CRTScreen";
-import { RetroButton } from "@/components/retro/RetroButton";
+import { ThemedButton } from "@/components/theme/ThemedButton";
 
 export default async function DashboardPage() {
   const session = await auth();
   const { active, closed } = await getBoards();
 
   return (
-    <CRTScreen>
+    <>
       <Header
         email={session!.user.email}
         role={session!.user.role}
       />
-      <main className="retro-main">
-        <div className="retro-board-header">
-          <h1 className="retro-board-title">RETROSPECTIVES</h1>
+      <main className="app-main">
+        <div className="app-board-header">
+          <h1 className="app-board-title">RETROSPECTIVES</h1>
           <Link href="/retro/new">
-            <RetroButton>+ New Retro</RetroButton>
+            <ThemedButton>+ New Retro</ThemedButton>
           </Link>
         </div>
 
-        <section className="retro-section">
-          <h2 className="retro-section-title">Active</h2>
+        <section className="app-section">
+          <h2 className="app-section-title">Active</h2>
           {active.length === 0 ? (
-            <p className="retro-empty">No active retrospectives.</p>
+            <p className="app-empty">No active retrospectives.</p>
           ) : (
-            <div className="retro-board-list">
+            <div className="app-board-list">
               {active.map((board) => (
                 <Link
                   key={board.id}
                   href={`/retro/${board.id}`}
-                  className="retro-board-item"
+                  className="app-board-item"
                 >
                   <div>
-                    <div className="retro-board-item-title">{board.title}</div>
-                    <div className="retro-board-item-meta">
+                    <div className="app-board-item-title">{board.title}</div>
+                    <div className="app-board-item-meta">
                       by {board.creatorEmail} &middot;{" "}
                       {new Date(board.createdAt).toLocaleDateString()}
                     </div>
@@ -49,21 +48,21 @@ export default async function DashboardPage() {
           )}
         </section>
 
-        <section className="retro-section">
-          <h2 className="retro-section-title">History</h2>
+        <section className="app-section">
+          <h2 className="app-section-title">History</h2>
           {closed.length === 0 ? (
-            <p className="retro-empty">No closed retrospectives yet.</p>
+            <p className="app-empty">No closed retrospectives yet.</p>
           ) : (
-            <div className="retro-board-list">
+            <div className="app-board-list">
               {closed.map((board) => (
                 <Link
                   key={board.id}
                   href={`/retro/${board.id}`}
-                  className="retro-board-item"
+                  className="app-board-item"
                 >
                   <div>
-                    <div className="retro-board-item-title">{board.title}</div>
-                    <div className="retro-board-item-meta">
+                    <div className="app-board-item-title">{board.title}</div>
+                    <div className="app-board-item-meta">
                       by {board.creatorEmail} &middot; closed{" "}
                       {board.closedAt
                         ? new Date(board.closedAt).toLocaleDateString()
@@ -77,6 +76,6 @@ export default async function DashboardPage() {
           )}
         </section>
       </main>
-    </CRTScreen>
+    </>
   );
 }

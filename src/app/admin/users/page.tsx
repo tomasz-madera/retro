@@ -1,7 +1,6 @@
 import { auth } from "@/lib/auth";
 import { getUsers } from "@/actions/admin";
 import { Header } from "@/components/layout/Header";
-import { CRTScreen } from "@/components/retro/CRTScreen";
 import { UserRoleForm } from "@/components/admin/UserRoleForm";
 
 export default async function AdminUsersPage() {
@@ -9,10 +8,10 @@ export default async function AdminUsersPage() {
   const users = await getUsers();
 
   return (
-    <CRTScreen>
+    <>
       <Header email={session!.user.email} role={session!.user.role} />
-      <main className="retro-main">
-        <h1 className="retro-board-title" style={{ marginBottom: 24 }}>
+      <main className="app-main">
+        <h1 className="app-board-title" style={{ marginBottom: 24 }}>
           USER MANAGEMENT
         </h1>
         <table className="admin-table">
@@ -42,6 +41,6 @@ export default async function AdminUsersPage() {
           </tbody>
         </table>
       </main>
-    </CRTScreen>
+    </>
   );
 }

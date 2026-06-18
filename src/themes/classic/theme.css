@@ -1,0 +1,256 @@
+[data-theme="classic"] {
+  --color-bg: #f5f0e6;
+  --color-surface: #fffef8;
+  --color-text: #2c2416;
+  --color-text-muted: #6b5d4a;
+  --color-accent: #4a7c59;
+  --color-accent-muted: #6b9b7a;
+  --color-accent-glow: #3d6b4a;
+  --color-heading: #8b6914;
+  --color-danger: #c44;
+  --color-border: #d4c9b0;
+  --color-column-well: #4a7c59;
+  --color-column-improve: #b8860b;
+  --color-column-actions: #3d6b9b;
+  --font-sans: "Nunito", system-ui, sans-serif;
+  --font-display: "Nunito", system-ui, sans-serif;
+}
+
+[data-theme="classic"] body {
+  font-size: 16px;
+}
+
+[data-theme="classic"] a:hover {
+  color: var(--color-accent-glow);
+}
+
+[data-theme="classic"] .theme-auth-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(44, 36, 22, 0.1);
+  max-width: 440px;
+  width: 100%;
+}
+
+[data-theme="classic"] .theme-auth-panel-title {
+  font-weight: 700;
+  font-size: 14px;
+  padding: 16px 24px 0;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+[data-theme="classic"] .app-header {
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+  box-shadow: 0 1px 4px rgba(44, 36, 22, 0.06);
+}
+
+[data-theme="classic"] .app-logo {
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+[data-theme="classic"] .app-user {
+  color: var(--color-text-muted);
+}
+
+[data-theme="classic"] .app-link-button {
+  color: var(--color-accent);
+}
+
+[data-theme="classic"] .app-link-button:hover {
+  color: var(--color-accent-glow);
+}
+
+[data-theme="classic"] .app-button {
+  border-radius: 6px;
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(44, 36, 22, 0.08);
+}
+
+[data-theme="classic"] .app-button:hover:not(:disabled) {
+  background: var(--color-accent);
+  color: var(--color-surface);
+}
+
+[data-theme="classic"] .app-button-secondary {
+  border-color: var(--color-border);
+  color: var(--color-text-muted);
+}
+
+[data-theme="classic"] .app-button-secondary:hover:not(:disabled) {
+  background: var(--color-border);
+  color: var(--color-text);
+}
+
+[data-theme="classic"] .app-button-danger {
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}
+
+[data-theme="classic"] .app-button-danger:hover:not(:disabled) {
+  background: var(--color-danger);
+  color: white;
+}
+
+[data-theme="classic"] .app-input,
+[data-theme="classic"] .app-select {
+  background: white;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+[data-theme="classic"] .app-input:focus,
+[data-theme="classic"] .app-select:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-accent) 20%, transparent);
+}
+
+[data-theme="classic"] .app-label {
+  color: var(--color-text-muted);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+[data-theme="classic"] .app-error {
+  color: var(--color-danger);
+}
+
+[data-theme="classic"] .app-section-title {
+  color: var(--color-heading);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+[data-theme="classic"] .app-board-item {
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  border-radius: 6px;
+}
+
+[data-theme="classic"] .app-board-item:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 2px 8px rgba(44, 36, 22, 0.08);
+}
+
+[data-theme="classic"] .app-board-item-title {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+[data-theme="classic"] .app-board-item-meta,
+[data-theme="classic"] .app-empty {
+  color: var(--color-text-muted);
+}
+
+[data-theme="classic"] .app-board-title,
+[data-theme="classic"] .auth-title {
+  color: var(--color-text);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+[data-theme="classic"] .app-column {
+  background: color-mix(in srgb, var(--color-surface) 80%, var(--color-bg));
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+[data-theme="classic"] .app-column-over {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-accent) 25%, transparent);
+}
+
+[data-theme="classic"] .app-column:nth-child(1) .app-column-title {
+  color: var(--color-column-well);
+}
+
+[data-theme="classic"] .app-column:nth-child(2) .app-column-title {
+  color: var(--color-column-improve);
+}
+
+[data-theme="classic"] .app-column:nth-child(3) .app-column-title {
+  color: var(--color-column-actions);
+}
+
+[data-theme="classic"] .app-column-title {
+  font-weight: 700;
+  font-size: 12px;
+  border-bottom: 2px solid var(--color-border);
+}
+
+[data-theme="classic"] .app-card {
+  background: #fff9c4;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 2px 3px 8px rgba(44, 36, 22, 0.15);
+  position: relative;
+  transform: rotate(-0.5deg);
+}
+
+[data-theme="classic"] .app-card:nth-child(even) {
+  transform: rotate(0.5deg);
+}
+
+[data-theme="classic"] .app-card-dragging {
+  transform: rotate(0deg) scale(1.02);
+  box-shadow: 4px 6px 16px rgba(44, 36, 22, 0.2);
+}
+
+[data-theme="classic"] .theme-card-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(
+    225deg,
+    color-mix(in srgb, var(--color-text) 12%, transparent) 50%,
+    transparent 50%
+  );
+  pointer-events: none;
+}
+
+[data-theme="classic"] .app-card-meta {
+  color: var(--color-text-muted);
+  font-size: 12px;
+}
+
+[data-theme="classic"] .admin-table th,
+[data-theme="classic"] .admin-table td {
+  border: 1px solid var(--color-border);
+}
+
+[data-theme="classic"] .admin-table th {
+  color: var(--color-heading);
+  background: var(--color-surface);
+  font-weight: 700;
+}
+
+[data-theme="classic"] .status-active {
+  border-color: var(--color-column-well);
+  color: var(--color-column-well);
+  border-radius: 4px;
+}
+
+[data-theme="classic"] .status-closed {
+  border-color: var(--color-text-muted);
+  color: var(--color-text-muted);
+  border-radius: 4px;
+}
+
+[data-theme="classic"] .theme-toggle-select {
+  background: white;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  border-radius: 4px;
+}

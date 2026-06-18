@@ -1,0 +1,20 @@
+:root {
+  --color-bg: #0a0e0a;
+  --color-surface: #0d1a0d;
+  --color-text: #33ff33;
+  --color-text-muted: #1a8c1a;
+  --color-accent: #33ff33;
+  --color-accent-muted: #1a8c1a;
+  --color-accent-glow: #00ff41;
+  --color-heading: #ffb000;
+  --color-danger: #ff3333;
+  --color-border: #1a5c1a;
+  --color-column-well: #33ff33;
+  --color-column-improve: #ffb000;
+  --color-column-actions: #66b3ff;
+  --shadow-accent: color-mix(in srgb, var(--color-accent) 30%, transparent);
+  --shadow-accent-soft: color-mix(in srgb, var(--color-accent) 10%, transparent);
+  --shadow-accent-medium: color-mix(in srgb, var(--color-accent) 20%, transparent);
+  --font-sans: "VT323", monospace;
+  --font-display: "Press Start 2P", monospace;
+}

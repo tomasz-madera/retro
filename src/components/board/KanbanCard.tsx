@@ -2,6 +2,7 @@
 
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
+import { useThemeComponents } from "@/lib/theme/hooks";
 
 type CardData = {
   id: number;
@@ -10,12 +11,13 @@ type CardData = {
   createdAt: Date;
 };
 
-type CardProps = {
+type KanbanCardProps = {
   card: CardData;
   disabled?: boolean;
 };
 
-export function Card({ card, disabled }: CardProps) {
+export function KanbanCard({ card, disabled }: KanbanCardProps) {
+  const { Card } = useThemeComponents();
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } =
     useSortable({
       id: `card-${card.id}`,
@@ -25,22 +27,21 @@ export function Card({ card, disabled }: CardProps) {
   const style = {
     transform: CSS.Transform.toString(transform),
     transition,
-    opacity: isDragging ? 0.5 : 1,
   };
 
   return (
-    <div
+    <Card
       ref={setNodeRef}
       style={style}
-      className="retro-card"
+      dragging={isDragging}
       {...attributes}
       {...listeners}
     >
-      <p className="retro-card-content">{card.content}</p>
-      <div className="retro-card-meta">
+      <p className="app-card-content">{card.content}</p>
+      <div className="app-card-meta">
         <span>{card.authorEmail}</span>
         <span>{new Date(card.createdAt).toLocaleString()}</span>
       </div>
-    </div>
+    </Card>
   );
 }

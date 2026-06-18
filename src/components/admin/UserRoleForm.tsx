@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { updateUserRole } from "@/actions/admin";
-import { RetroButton } from "@/components/retro/RetroButton";
+import { ThemedButton } from "@/components/theme/ThemedButton";
 
 type UserRoleFormProps = {
   userId: number;
@@ -29,27 +29,27 @@ export function UserRoleForm({
   }
 
   if (isSelf) {
-    return <span className="retro-text-dim">—</span>;
+    return <span className="app-text-muted">—</span>;
   }
 
   return (
     <div style={{ display: "flex", gap: 8 }}>
       {currentRole !== "admin" && (
-        <RetroButton
-          className="retro-btn-sm"
+        <ThemedButton
+          className="app-button-sm"
           onClick={() => handleRoleChange("admin")}
         >
           Make Admin
-        </RetroButton>
+        </ThemedButton>
       )}
       {currentRole !== "user" && (
-        <RetroButton
-          className="retro-btn-sm"
+        <ThemedButton
+          className="app-button-sm"
           variant="secondary"
           onClick={() => handleRoleChange("user")}
         >
           Make User
-        </RetroButton>
+        </ThemedButton>
       )}
     </div>
   );

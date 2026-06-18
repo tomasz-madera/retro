@@ -7,7 +7,7 @@ import {
 import { useDroppable } from "@dnd-kit/core";
 import type { ActionResult } from "@/lib/types";
 import { AddCardForm } from "./AddCardForm";
-import { Card } from "./Card";
+import { KanbanCard } from "./KanbanCard";
 
 type CardData = {
   id: number;
@@ -38,13 +38,13 @@ export function Column({ id, name, cards, disabled, onAddCard }: ColumnProps) {
   return (
     <div
       ref={setNodeRef}
-      className={`retro-column ${isOver ? "retro-column-over" : ""}`}
+      className={`app-column ${isOver ? "app-column-over" : ""}`}
     >
-      <h3 className="retro-column-title">{name}</h3>
+      <h3 className="app-column-title">{name}</h3>
       <SortableContext items={cardIds} strategy={verticalListSortingStrategy}>
-        <div className="retro-column-cards">
+        <div className="app-column-cards">
           {cards.map((card) => (
-            <Card key={card.id} card={card} disabled={disabled} />
+            <KanbanCard key={card.id} card={card} disabled={disabled} />
           ))}
         </div>
       </SortableContext>

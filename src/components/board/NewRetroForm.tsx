@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { createBoard } from "@/actions/board";
-import { RetroButton } from "@/components/retro/RetroButton";
+import { ThemedButton } from "@/components/theme/ThemedButton";
 
 const DEFAULT_COLUMNS = [
   { name: "What went well?" },
@@ -59,7 +59,7 @@ export function NewRetroForm() {
   return (
     <form onSubmit={handleSubmit} className="auth-form" style={{ maxWidth: 600 }}>
       <div>
-        <label htmlFor="title" className="retro-label">
+        <label htmlFor="title" className="app-label">
           Board Title
         </label>
         <input
@@ -68,13 +68,13 @@ export function NewRetroForm() {
           onChange={(e) => setTitle(e.target.value)}
           required
           maxLength={200}
-          className="retro-input"
+          className="app-input"
           placeholder="Sprint 42 Retrospective"
         />
       </div>
 
       <div>
-        <label className="retro-label">Columns</label>
+        <label className="app-label">Columns</label>
         <div className="column-builder">
           {columns.map((col, index) => (
             <div key={index} className="column-row">
@@ -83,43 +83,43 @@ export function NewRetroForm() {
                 onChange={(e) => updateColumn(index, e.target.value)}
                 required
                 maxLength={100}
-                className="retro-input"
+                className="app-input"
                 placeholder={`Column ${index + 1}`}
               />
-              <RetroButton
+              <ThemedButton
                 type="button"
                 variant="danger"
-                className="retro-btn-sm"
+                className="app-button-sm"
                 onClick={() => removeColumn(index)}
                 disabled={columns.length <= 1}
               >
                 X
-              </RetroButton>
+              </ThemedButton>
             </div>
           ))}
         </div>
-        <RetroButton
+        <ThemedButton
           type="button"
           variant="secondary"
-          className="retro-btn-sm"
+          className="app-button-sm"
           onClick={addColumn}
           disabled={columns.length >= 10}
           style={{ marginTop: 8 }}
         >
           + Add Column
-        </RetroButton>
+        </ThemedButton>
       </div>
 
-      {error && <p className="retro-error">{error}</p>}
+      {error && <p className="app-error">{error}</p>}
 
       <div style={{ display: "flex", gap: 12 }}>
-        <RetroButton type="submit" disabled={pending}>
+        <ThemedButton type="submit" disabled={pending}>
           {pending ? "Creating..." : "Create Board"}
-        </RetroButton>
+        </ThemedButton>
         <Link href="/">
-          <RetroButton type="button" variant="secondary">
+          <ThemedButton type="button" variant="secondary">
             Cancel
-          </RetroButton>
+          </ThemedButton>
         </Link>
       </div>
     </form>

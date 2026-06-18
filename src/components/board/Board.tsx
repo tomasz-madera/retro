@@ -13,7 +13,7 @@ import {
 } from "@dnd-kit/core";
 import { moveCard, addCard } from "@/actions/board";
 import { Column } from "./Column";
-import { Card } from "./Card";
+import { KanbanCard } from "./KanbanCard";
 
 type CardData = {
   id: number;
@@ -163,7 +163,7 @@ export function Board({ columns, initialCards, disabled }: BoardProps) {
       onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}
     >
-      <div className="retro-board">
+      <div className="app-board">
         {sortedColumns.map((column) => (
           <Column
             key={column.id}
@@ -177,7 +177,7 @@ export function Board({ columns, initialCards, disabled }: BoardProps) {
       </div>
       <DragOverlay>
         {activeCard ? (
-          <Card card={activeCard} disabled />
+          <KanbanCard card={activeCard} disabled />
         ) : null}
       </DragOverlay>
     </DndContext>

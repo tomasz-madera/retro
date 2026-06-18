@@ -43,13 +43,13 @@ export function AddCardForm({ columnId, disabled, onAddCard }: AddCardFormProps)
         placeholder="Add a card..."
         rows={2}
         disabled={disabled || pending}
-        className="retro-input"
+        className="app-input"
       />
-      {error && <p className="retro-error">{error}</p>}
+      {error && <p className="app-error">{error}</p>}
       <button
         type="submit"
         disabled={disabled || pending || !content.trim()}
-        className="retro-btn retro-btn-secondary retro-btn-sm"
+        className="app-button app-button-secondary app-button-sm"
       >
         {pending ? "..." : "Add"}
       </button>

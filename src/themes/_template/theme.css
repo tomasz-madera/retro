@@ -1,0 +1,16 @@
+[data-theme="your-theme-id"] {
+  --color-bg: #ffffff;
+  --color-surface: #f5f5f5;
+  --color-text: #111111;
+  --color-text-muted: #666666;
+  --color-accent: #0066cc;
+  --color-accent-muted: #4488cc;
+  --color-accent-glow: #0088ff;
+  --color-heading: #333333;
+  --color-danger: #cc0000;
+  --color-border: #dddddd;
+  --font-sans: system-ui, sans-serif;
+  --font-display: system-ui, sans-serif;
+}
+
+/* Add [data-theme="your-theme-id"] .app-* overrides here */

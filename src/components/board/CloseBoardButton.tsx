@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { closeBoard } from "@/actions/board";
-import { RetroButton } from "@/components/retro/RetroButton";
+import { ThemedButton } from "@/components/theme/ThemedButton";
 
 type CloseBoardButtonProps = {
   boardId: number;
@@ -25,8 +25,8 @@ export function CloseBoardButton({ boardId }: CloseBoardButtonProps) {
   }
 
   return (
-    <RetroButton variant="danger" onClick={handleClose}>
+    <ThemedButton variant="danger" onClick={handleClose}>
       Close Retro
-    </RetroButton>
+    </ThemedButton>
   );
 }

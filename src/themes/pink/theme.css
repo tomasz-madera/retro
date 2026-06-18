@@ -1,0 +1,255 @@
+[data-theme="pink"] {
+  --color-bg: #1a0a14;
+  --color-surface: #2d1525;
+  --color-text: #fce4ec;
+  --color-text-muted: #c9a0b0;
+  --color-accent: #ff6eb4;
+  --color-accent-muted: #d4569a;
+  --color-accent-glow: #ff8cc8;
+  --color-heading: #ffb3d9;
+  --color-danger: #ff5577;
+  --color-border: #5c2a4a;
+  --color-column-well: #ff8cc8;
+  --color-column-improve: #ffb3d9;
+  --color-column-actions: #e091ff;
+  --font-sans: "Quicksand", system-ui, sans-serif;
+  --font-display: "Quicksand", system-ui, sans-serif;
+}
+
+[data-theme="pink"] body {
+  font-size: 16px;
+}
+
+[data-theme="pink"] .theme-shell {
+  background: linear-gradient(160deg, #1a0a14 0%, #2d1525 40%, #1f0d1a 100%);
+}
+
+[data-theme="pink"] .theme-shell-glow::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at 30% 20%,
+    rgba(255, 110, 180, 0.08) 0%,
+    transparent 60%
+  );
+  z-index: 0;
+}
+
+[data-theme="pink"] a:hover {
+  color: var(--color-accent-glow);
+  text-shadow: 0 0 8px color-mix(in srgb, var(--color-accent-glow) 50%, transparent);
+}
+
+[data-theme="pink"] .theme-auth-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  box-shadow: 0 0 30px color-mix(in srgb, var(--color-accent) 15%, transparent);
+  max-width: 440px;
+  width: 100%;
+}
+
+[data-theme="pink"] .theme-auth-panel-title {
+  font-weight: 600;
+  font-size: 13px;
+  padding: 20px 24px 0;
+  color: var(--color-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+[data-theme="pink"] .app-header {
+  border-bottom: 1px solid var(--color-border);
+  background: color-mix(in srgb, var(--color-surface) 90%, transparent);
+  backdrop-filter: blur(8px);
+}
+
+[data-theme="pink"] .app-logo {
+  color: var(--color-accent-glow);
+  font-weight: 700;
+  font-size: 16px;
+  text-shadow: 0 0 12px color-mix(in srgb, var(--color-accent-glow) 40%, transparent);
+}
+
+[data-theme="pink"] .app-user {
+  color: var(--color-text-muted);
+}
+
+[data-theme="pink"] .app-link-button {
+  color: var(--color-accent);
+}
+
+[data-theme="pink"] .app-link-button:hover {
+  color: var(--color-accent-glow);
+}
+
+[data-theme="pink"] .app-button {
+  border-radius: 20px;
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+[data-theme="pink"] .app-button:hover:not(:disabled) {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  box-shadow: 0 0 20px color-mix(in srgb, var(--color-accent) 40%, transparent);
+}
+
+[data-theme="pink"] .app-button-secondary {
+  border-color: var(--color-border);
+  color: var(--color-text-muted);
+}
+
+[data-theme="pink"] .app-button-secondary:hover:not(:disabled) {
+  background: var(--color-border);
+  color: var(--color-text);
+}
+
+[data-theme="pink"] .app-button-danger {
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}
+
+[data-theme="pink"] .app-button-danger:hover:not(:disabled) {
+  background: var(--color-danger);
+  color: white;
+  box-shadow: 0 0 16px color-mix(in srgb, var(--color-danger) 40%, transparent);
+}
+
+[data-theme="pink"] .app-input,
+[data-theme="pink"] .app-select {
+  background: color-mix(in srgb, var(--color-bg) 60%, var(--color-surface));
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+[data-theme="pink"] .app-input:focus,
+[data-theme="pink"] .app-select:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--color-accent) 25%, transparent);
+}
+
+[data-theme="pink"] .app-label {
+  color: var(--color-text-muted);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+[data-theme="pink"] .app-error {
+  color: var(--color-danger);
+}
+
+[data-theme="pink"] .app-section-title {
+  color: var(--color-heading);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+[data-theme="pink"] .app-board-item {
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  border-radius: 12px;
+}
+
+[data-theme="pink"] .app-board-item:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--color-accent) 15%, transparent);
+}
+
+[data-theme="pink"] .app-board-item-title {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+[data-theme="pink"] .app-board-item-meta,
+[data-theme="pink"] .app-empty {
+  color: var(--color-text-muted);
+}
+
+[data-theme="pink"] .app-board-title,
+[data-theme="pink"] .auth-title {
+  color: var(--color-accent-glow);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+[data-theme="pink"] .app-column {
+  background: color-mix(in srgb, var(--color-surface) 80%, var(--color-bg));
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+}
+
+[data-theme="pink"] .app-column-over {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--color-accent) 20%, transparent);
+}
+
+[data-theme="pink"] .app-column:nth-child(1) .app-column-title {
+  color: var(--color-column-well);
+}
+
+[data-theme="pink"] .app-column:nth-child(2) .app-column-title {
+  color: var(--color-column-improve);
+}
+
+[data-theme="pink"] .app-column:nth-child(3) .app-column-title {
+  color: var(--color-column-actions);
+}
+
+[data-theme="pink"] .app-column-title {
+  font-weight: 600;
+  font-size: 11px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+[data-theme="pink"] .app-card {
+  background: color-mix(in srgb, var(--color-surface) 70%, var(--color-bg));
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="pink"] .app-card-dragging {
+  box-shadow: 0 0 20px color-mix(in srgb, var(--color-accent) 30%, transparent);
+}
+
+[data-theme="pink"] .app-card-meta {
+  color: var(--color-text-muted);
+  font-size: 12px;
+}
+
+[data-theme="pink"] .admin-table th,
+[data-theme="pink"] .admin-table td {
+  border: 1px solid var(--color-border);
+}
+
+[data-theme="pink"] .admin-table th {
+  color: var(--color-heading);
+  background: var(--color-surface);
+  font-weight: 600;
+}
+
+[data-theme="pink"] .status-active {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  border-radius: 10px;
+}
+
+[data-theme="pink"] .status-closed {
+  border-color: var(--color-text-muted);
+  color: var(--color-text-muted);
+  border-radius: 10px;
+}
+
+[data-theme="pink"] .theme-toggle-select {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  border-radius: 8px;
+}
