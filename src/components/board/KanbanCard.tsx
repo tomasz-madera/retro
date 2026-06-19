@@ -2,6 +2,7 @@
 
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
+import { formatDateTime } from "@/lib/format-date";
 import { useThemeComponents } from "@/lib/theme/hooks";
 
 type CardData = {
@@ -40,7 +41,7 @@ export function KanbanCard({ card, disabled }: KanbanCardProps) {
       <p className="app-card-content">{card.content}</p>
       <div className="app-card-meta">
         <span>{card.authorEmail}</span>
-        <span>{new Date(card.createdAt).toLocaleString()}</span>
+        <span>{formatDateTime(card.createdAt)}</span>
       </div>
     </Card>
   );

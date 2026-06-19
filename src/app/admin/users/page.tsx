@@ -1,5 +1,6 @@
 import { auth } from "@/lib/auth";
 import { getUsers } from "@/actions/admin";
+import { formatDate } from "@/lib/format-date";
 import { Header } from "@/components/layout/Header";
 import { UserRoleForm } from "@/components/admin/UserRoleForm";
 
@@ -28,7 +29,7 @@ export default async function AdminUsersPage() {
               <tr key={user.id}>
                 <td>{user.email}</td>
                 <td>{user.role}</td>
-                <td>{new Date(user.createdAt).toLocaleDateString()}</td>
+                <td>{formatDate(user.createdAt)}</td>
                 <td>
                   <UserRoleForm
                     userId={user.id}

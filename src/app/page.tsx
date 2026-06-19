@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { auth } from "@/lib/auth";
 import { getBoards } from "@/actions/board";
+import { formatDate } from "@/lib/format-date";
 import { Header } from "@/components/layout/Header";
 import { ThemedButton } from "@/components/theme/ThemedButton";
 
@@ -38,7 +39,7 @@ export default async function DashboardPage() {
                     <div className="app-board-item-title">{board.title}</div>
                     <div className="app-board-item-meta">
                       by {board.creatorEmail} &middot;{" "}
-                      {new Date(board.createdAt).toLocaleDateString()}
+                      {formatDate(board.createdAt)}
                     </div>
                   </div>
                   <span className="status-badge status-active">active</span>
@@ -64,9 +65,7 @@ export default async function DashboardPage() {
                     <div className="app-board-item-title">{board.title}</div>
                     <div className="app-board-item-meta">
                       by {board.creatorEmail} &middot; closed{" "}
-                      {board.closedAt
-                        ? new Date(board.closedAt).toLocaleDateString()
-                        : "—"}
+                      {board.closedAt ? formatDate(board.closedAt) : "—"}
                     </div>
                   </div>
                   <span className="status-badge status-closed">closed</span>
