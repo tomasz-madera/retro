@@ -18,7 +18,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en" data-theme={theme} suppressHydrationWarning>
-      <body>
+      <body suppressHydrationWarning>
         <ThemeProvider initialTheme={theme}>
           <ThemedShell>{children}</ThemedShell>
         </ThemeProvider>
