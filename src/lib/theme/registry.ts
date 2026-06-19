@@ -3,9 +3,9 @@ import { classicTheme } from "@/themes/classic";
 import { pinkTheme } from "@/themes/pink";
 import type { ThemeId, ThemeModule } from "./types";
 
-export const DEFAULT_THEME: ThemeId = "crt";
+export const DEFAULT_THEME: ThemeId = "classic";
 
-export const THEME_IDS: ThemeId[] = ["crt", "classic", "pink"];
+export const THEME_IDS: ThemeId[] = ["classic", "crt", "pink"];
 
 export const themes: Record<ThemeId, ThemeModule> = {
   crt: crtTheme,
